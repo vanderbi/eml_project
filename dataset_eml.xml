@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="edi.91.1" system="edi" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1  http://nis.lternet.edu/schemas/EML/eml-2.1.1/eml.xsd">
+  <dataset>
+    <title>Mississippi River floods: Return of the DENITRIFICATION!</title>
+    <creator>
+      <individualName>
+        <givenName>Colin</givenName>
+        <surName>Smith</surName>
+      </individualName>
+      <organizationName>Environmental Data Initiative</organizationName>
+      <positionName>Information Manager</positionName>
+      <electronicMailAddress>colin.smith@wisc.edu</electronicMailAddress>
+    </creator>
+    <abstract>
+      <para>
+  These data for water years 2011-2016 apply to the San Francisco Bay’s
+  Central Valley watershed and fresh water flows into and out of the
+  Delta. Factors controlling State Water Project and Central Valley
+  Project exports from the south Delta were gleaned from various public
+  agency sources when available, and when not available, were determined
+  from the available information on flows and regulations and
+  controlling factors on adjacent days.
+</para>
+    </abstract>
+    <keywordSet>
+      <keyword>river</keyword>
+      <keyword>freshwater</keyword>
+      <keyword>aquatic ecosystems</keyword>
+      <keyword>brackish water</keyword>
+      <keyword>estuarine</keyword>
+      <keyword>delta</keyword>
+      <keywordThesaurus>LTER controlled vocabulary</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>disturbance</keyword>
+      <keywordThesaurus>LTER core area</keywordThesaurus>
+    </keywordSet>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Some where in a geographic location far far away.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-121.9</westBoundingCoordinate>
+          <eastBoundingCoordinate>-121.3</eastBoundingCoordinate>
+          <northBoundingCoordinate>38.5</northBoundingCoordinate>
+          <southBoundingCoordinate>37.7</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2010-01-01</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2016-01-01</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <contact>
+      <individualName>
+        <givenName>Colin</givenName>
+        <surName>Smith</surName>
+      </individualName>
+      <organizationName>Environmental Data Initiative</organizationName>
+      <positionName>Information Manager</positionName>
+      <electronicMailAddress>colin.smith@wisc.edu</electronicMailAddress>
+    </contact>
+    <methods>
+      <methodStep>
+        <description>
+          <para>
+  Data is a compilation of publicly-available data and information from
+  the following sources:
+</para>
+          <para>
+  California Department of Water Resources. Dayflow: an estimate of
+  daily average Delta outflow. 2016. Available:
+  http://www.water.ca.gov/dayflow/
+</para>
+          <para>
+  California Department of Water Resources. Estimates of Natural and
+  Unimpaired Flows for the Central Valley of California: Water Years
+  1922-2014. 2016. Available:
+  https://msb.water.ca.gov/documents/86728/a702a57f-ae7a-41a3-8bff-722e144059d6
+</para>
+          <para>
+  California Department of Water Resources. 2017. California Data
+  Exchange Center. Available at: http://cdec.water.ca.gov/
+</para>
+        </description>
+      </methodStep>
+    </methods>
+    <dataTable>
+      <entityName>demo_data.csv</entityName>
+      <entityDescription>Data table for make EML with R demonstration.</entityDescription>
+      <physical>
+        <objectName>demo_data.csv</objectName>
+        <size unit="byte">293348</size>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Date</attributeName>
+          <attributeDefinition>Calendar date</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM/DD/YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Control</attributeName>
+          <attributeDefinition>Most-limiting factor controlling exports (various sources)</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Outflow</code>
+                    <definition>Delta outflow</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>EC</code>
+                    <definition>Electrical conductivity</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>E/I</code>
+                    <definition>Export:inflow ratio</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>None-B</code>
+                    <definition>At least one pumping unit below system capacity</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>None-W</code>
+                    <definition>System capacity</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>OMR</code>
+                    <definition>Old and Middle River flow</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Salvage</code>
+                    <definition>OMR due to salvage trigger</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>None-G</code>
+                    <definition>Storate</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>SJR I/E</code>
+                    <definition>San Joaquin River inflow:export ratio</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>CVPIA</code>
+                    <definition>Central Valley Project Improvement Act</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>X2</code>
+                    <definition>2 ppt isohaline location in estuary</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>JSA</code>
+                    <definition>Joint Stipulation Agreement in lieu of OMR</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Vernalis</code>
+                    <definition>Vernalis 1:1 ratio</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>DS-OMR</code>
+                    <definition>Old and Middle River flow for Delta Smelt</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>TUC D-1641</code>
+                    <definition>Temporary Urgency Change Decision 1641</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>DS-Vol</code>
+                    <definition>Delta Smelt Voluntary</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Category</attributeName>
+          <attributeDefinition>Category of export limitation shown in temporal analysis</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>F&amp;W</code>
+                    <definition>Fish and wildlife</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>HSB</code>
+                    <definition>Hydraulic salinity barrier</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Infrastructure</code>
+                    <definition>System capacity</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>AF</code>
+                    <definition>Anadromous Fisheries RPA</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>DS</code>
+                    <definition>Delta Smelt RPA</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>OUT</attributeName>
+          <attributeDefinition>Net Delta Outflow Index (Dayflow 2016)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>EXPORTS</attributeName>
+          <attributeDefinition>Total Delta exports (Dayflow 2016)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>HSB</attributeName>
+          <attributeDefinition>Hydraulic Salinity Barrier (estimate)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ProjectExports</attributeName>
+          <attributeDefinition>SWP and CVP south Delta exports only (Dayflow 2016)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ATE</attributeName>
+          <attributeDefinition>Additional Theoretical Export (unused export capacity </attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>AUO</attributeName>
+          <attributeDefinition>Additional Uncaptured Outflow (outflow exceeding </attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>FW</attributeName>
+          <attributeDefinition>Reduced export/additional outflow for fish and wildlife </attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>OMR</attributeName>
+          <attributeDefinition>Old and Middle River net daily flow (USGS)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ESA</attributeName>
+          <attributeDefinition>Reduced export/additional outflow associated with </attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Both</attributeName>
+          <attributeDefinition>Reduced export/additional outflow associated with </attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>AF</attributeName>
+          <attributeDefinition>Reduced export/additional outflow associated with</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>DS</attributeName>
+          <attributeDefinition>Reduced export/additional outflow associated with</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>DSVOL</attributeName>
+          <attributeDefinition>Reduced export/additional outflow associated with v</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>OMRDIF</attributeName>
+          <attributeDefinition>Difference between OMR for AF and OMR for DS</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>HORB</attributeName>
+          <attributeDefinition>Head of Old River Barrier status (CA DWR)</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>out</code>
+                    <definition>Barrier removed</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>in</code>
+                    <definition>Barrier in place</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Vernalis</attributeName>
+          <attributeDefinition>San Joaquin River near Vernalis average daily flow </attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>SystemCapacity</attributeName>
+          <attributeDefinition>Estimated Export system capacity not </attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>SWP</attributeName>
+          <attributeDefinition>SWP south Delta exports only (Dayflow)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>CVP</attributeName>
+          <attributeDefinition>CVP south Delta exports only (Dayflow)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>SWPbelowCap</attributeName>
+          <attributeDefinition>SWP exports how far below system capacity</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>CVPbelowCap</attributeName>
+          <attributeDefinition>CVP exports how far below system capacity</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>UnimpairedDeltaIn</attributeName>
+          <attributeDefinition>Unimpaired Delta inflow based on a monthly regres</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>UnimpairedDeltaOut</attributeName>
+          <attributeDefinition>Unimpaired Delta outflow based on unimpaired Del</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TOT</attributeName>
+          <attributeDefinition>Total Delta inflow (Dayflow)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>cubicFeetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>2192</numberOfRecords>
+    </dataTable>
+  </dataset>
+</eml:eml>
